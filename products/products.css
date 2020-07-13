@@ -1,0 +1,40 @@
+#wares {
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#wares li {
+    list-style: none;
+    position: relative;
+    background: lightblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 2px #ccc;
+}
+
+#wares li img {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.price {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price button {
+    transition: color 200ms ease-in-out
+}
