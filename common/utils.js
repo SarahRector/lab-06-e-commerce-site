@@ -24,3 +24,15 @@ export function calcLineTotal(quantity, price) {
 function roundCurrency(amount) {
     return Math.round(amount * 100) / 100;
 }
+
+export function calcOrderTotal(cart, wares) {
+    let orderTotal = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const ware = findById(wares, lineItem.id);
+        const lineTotal = calcLineTotal(lineItem.quantity, ware.price);
+        orderTotal += lineTotal;
+    }
+    return roundCurrency(orderTotal);
+}
