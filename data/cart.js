@@ -1,6 +1,6 @@
 const cart = [{
     id: 'humphrey-whale',
-    quantity: 1
+    quantity: 5
 }, {
     id: 'moby-dick-whale',
     quantity: 4

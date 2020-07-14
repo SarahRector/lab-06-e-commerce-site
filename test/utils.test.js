@@ -1,6 +1,6 @@
 import wares from '../data/wares.js';
 import cart from '../data/cart.js';
-import { findById } from '../common/utils.js';
+import { findById, calcLineTotal } from '../common/utils.js';
 const test = QUnit.test;
 
 QUnit.module('Utilities');
@@ -25,4 +25,15 @@ test('find product by id returns null if no match', assert => {
     const foundWare = findById(wares, id);
 
     assert.equal(foundWare, expected);
+});
+
+test('calculate line total', (assert) => {
+    const quantity = 5;
+    const price = 15.00;
+    const expected = 75.00;
+
+    const total = calcLineTotal(quantity, price);
+
+    assert.equal(total, expected);
+
 });

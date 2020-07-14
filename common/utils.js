@@ -8,3 +8,12 @@ export function findById(wares, id) {
     }
     return null;
 }
+
+export function calcLineTotal(quantity, price) {
+    const amount = quantity * price;
+    return roundCurrency(amount);
+}
+
+function roundCurrency(amount) {
+    return Math.round(amount * 100) / 100;
+}
