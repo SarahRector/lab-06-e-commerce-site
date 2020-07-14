@@ -22,10 +22,11 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color: var(--color1);
 }
 
 section {
-    background-color: var(--color5);
+
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -50,7 +51,12 @@ header {
 
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h1 {
+    font-size : 1.2rem;
     font-weight: bold;
 }
 

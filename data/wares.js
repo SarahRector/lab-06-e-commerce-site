@@ -1,6 +1,6 @@
 const whaleShark = {
     id: 'whale-shark',
-    name: 'False Whale',
+    name: 'Whale Shark',
     image: 'whale-shark.jpg',
     description: 'This is not the whale you are looking for',
     category: 'shark',
@@ -31,7 +31,7 @@ const humphreyWhale = {
 const mobyDickWhale = {
     id: 'moby-dick-whale',
     name: 'Moby Dick',
-    image: 'moby-dick.jpeg',
+    image: 'moby-dick.jpg',
     description: 'Some dude named Ahab is obsessed with me',
     category: 'not-impressed',
     price: 8.00,
@@ -41,11 +41,12 @@ const mobyDickWhale = {
 const freeWillyWhale = {
     id: 'free-willy-whale',
     name: 'Free Willy',
-    image: 'free-willy.jpeg',
+    image: 'free-willy.jpg',
     description: 'Honestly, kind of a show-off',
     category: 'cocky',
     price: 12.00,
     cost: 8.00
 };
 
+const wares = [whaleShark, blueWhale, humphreyWhale, mobyDickWhale, freeWillyWhale];
 export default wares;
