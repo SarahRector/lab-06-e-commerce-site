@@ -1,3 +1,6 @@
+import { findById, } from '../common/utils.js';
+
+
 export function renderWares(wares) {
     const li = document.createElement('li');
     const category = wares.category;
@@ -21,6 +24,29 @@ export function renderWares(wares) {
     const buttonEl = document.createElement('button');
     buttonEl.value = wares.id;
     buttonEl.textContent = 'Add';
+
+    buttonEl.addEventListener('click', () => {
+        const emptyCart = '[]';
+        const localStorageCart = localStorage.getItem('CART') || emptyCart;
+        const cart = JSON.parse(localStorageCart);
+
+        let itemInCart = findById(cart, wares.id);
+
+        if (!itemInCart) {
+            const initializedCartItem = {
+                id: wares.id,
+                quantity: 1
+            };
+            cart.push(initializedCartItem);
+        } else {
+            itemInCart.quantity++;
+        }
+
+        const stringyCart = JSON.stringify(cart);
+        localStorage.setItem('CART', stringyCart);
+        
+        alert('1 ' + wares.name + ' added to cart');
+    });
 
     pEl.append(buttonEl);
     li.append(pEl);
