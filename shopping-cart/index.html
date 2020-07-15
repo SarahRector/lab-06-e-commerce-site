@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Shopping Cart</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="shopping-cart.css">
+</head>
+<body>
+    <header>
+        <h1>Whale Wares Cart</h1>
+        <nav>
+            <a href="../">Home</a>
+            <a href="../products">Purchase Whale Wares</a>
+            <a href="./shopping-cart">Shopping Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="align-left">Wares</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="align-left">Moby Dick</td>
+                    <td>4</td>
+                    <td>$8.00</td>
+                    <td class="line-item-total">$32.00</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Order Total:</th>
+                    <th id="order-total-cell"></th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <p class="place-order-now">
+            <button>Place Order</button>
+        </p>
+    </main>
+
+    <script type="module" src="shopping-cart.js"></script>
+</body>
+</html>

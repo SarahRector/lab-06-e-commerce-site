@@ -1,0 +1,41 @@
+table, .place-order-now {
+   width: 100%;
+   max-width: 800px;
+   margin: auto; 
+}
+
+.place-order-now {
+    text-align: right;
+}
+
+button {
+    background: grey;
+    color: hotpink;
+    font-size: 2em;
+    margin-top: 40px;
+    height: 55px;
+    width: 250 px;
+}
+
+table, td, tr {
+    border: 1px solid darkcyan;
+    text-align: right;
+    padding: 10px;
+}
+
+tbody {
+    background: white;
+}
+
+tbody tr:nth-child(even) {
+    background: lightpink;
+}
+
+.order-total-cell {
+    font-weight: bolder;
+}
+
+tfoot {
+    background: white;
+    color: darkgrey;
+}

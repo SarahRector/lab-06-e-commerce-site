@@ -12,7 +12,8 @@ body {
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    /*font-family: 'Titillium Web', sans-serif;*/
+    font-family: 'Patua One', cursive;
     background-color: var(--color1);
 }
 
@@ -42,8 +43,8 @@ section {
 
 header {
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: wrap-reverse;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
@@ -63,4 +64,8 @@ h1 {
 .wallace-whale {
     max-width: 800px;
     max-height: 600px;
+}
+
+.welcome-link {
+    margin-bottom:px;
 }
