@@ -1,3 +1,5 @@
+import wares from '../data/wares.js';
+
 export function findById(wares, id) {
     for (let i = 0; i < wares.length; i++) {
         const ware = wares[i];
@@ -41,4 +43,16 @@ export function getCart() {
     const rawCart = localStorage.getItem('CART');
     const cart = JSON.parse(rawCart) || [];
     return cart;
+}
+
+export function orderConfirmation() {
+    const cart = getCart();
+    let confirmationDetails = [];
+    for (let i = 0; i < cart.length; i++) {
+        const cartItem = cart[i];
+        const eachWare = findById(wares, cartItem.id);
+        const eachOrder = (`${cartItem.quantity} ${eachWare.name}`);
+        confirmationDetails.push(eachOrder);
+    }
+    return confirmationDetails;
 }
