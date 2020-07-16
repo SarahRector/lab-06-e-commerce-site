@@ -58,7 +58,7 @@ export function renderWares(wares) {
         const stringyCart = JSON.stringify(cart);
         localStorage.setItem('CART', stringyCart);
         
-        alert('1 ' + wares.name + ' added to cart');
+        alert(quantityInput + ' ' + wares.name + ' added to cart');
     });
 
     pEl.append(buttonEl, myInput, labelEl);
