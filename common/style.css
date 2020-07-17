@@ -44,7 +44,7 @@ section {
 header {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);

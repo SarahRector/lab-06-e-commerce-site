@@ -2,6 +2,7 @@
     padding:0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #wares li {
@@ -10,16 +11,16 @@
     background: lightblue;
     border: 1px solid black;
     border-radius: 10px;
-    width: 150px;
-    height: 225px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    width: 200px;
+    height: 325px;
+    margin-right: 15px;
+    margin-bottom: 15px;
     text-align: center;
     box-shadow: 3px 3px 6px grey;
 }
 
 #wares li img {
-    width: 50%;
+    width: 75%;
     margin-top: 10px;
     margin-right: 20px;
 }
@@ -42,3 +43,4 @@
 .price button {
     transition: color 200ms ease-in-out
 }
+
