@@ -18,7 +18,7 @@ test('renders a ware', (expect) => {
         price: 5.00,
         cost: 2.00
     };
-    const expected = '<li class="shark" title="This is not the whale you are looking for"><img src="../assets/whale-shark.jpg" alt="Whale Shark Image"><h3>Whale Shark</h3><p class="price">$5.00<button value="whale-shark">Add</button></p></li>';
+    const expected = '<li class="shark" title="This is not the whale you are looking for"><img src="../assets/whale-shark.jpg" alt="Whale Shark Image"><h3>Whale Shark</h3><p class="price">$5.00<button value="whale-shark">Add</button><input type="number" id="quantity" name="quantity" min="1" max="200"><label>Quantity</label></p></li>';
     
     //Act 
     // Call the function you're testing and set the result to a const

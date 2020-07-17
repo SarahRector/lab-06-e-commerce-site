@@ -25,30 +25,43 @@ export function renderWares(wares) {
     buttonEl.value = wares.id;
     buttonEl.textContent = 'Add';
 
+    const labelEl = document.createElement('label');
+    labelEl.for = 'quantity';
+    labelEl.textContent = 'Quantity';
+
+    const myInput = document.createElement('input');
+    myInput.type = 'number';
+    myInput.id = 'quantity';
+    myInput.name = 'quantity';
+    myInput.min = 1;
+    myInput.max = 200;
+    myInput.append(labelEl);
+
     buttonEl.addEventListener('click', () => {
         const emptyCart = '[]';
         const localStorageCart = localStorage.getItem('CART') || emptyCart;
         const cart = JSON.parse(localStorageCart);
+        const quantityInput = Number(myInput.value);
 
         let itemInCart = findById(cart, wares.id);
 
         if (!itemInCart) {
             const initializedCartItem = {
                 id: wares.id,
-                quantity: 1
+                quantity: quantityInput
             };
             cart.push(initializedCartItem);
         } else {
-            itemInCart.quantity++;
+            itemInCart.quantity = itemInCart.quantity + quantityInput;
         }
 
         const stringyCart = JSON.stringify(cart);
         localStorage.setItem('CART', stringyCart);
         
-        alert('1 ' + wares.name + ' added to cart');
+        alert(quantityInput + ' ' + wares.name + ' added to cart');
     });
 
-    pEl.append(buttonEl);
+    pEl.append(buttonEl, myInput, labelEl);
     li.append(pEl);
     
     return li;

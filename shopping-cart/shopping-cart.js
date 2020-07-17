@@ -1,6 +1,12 @@
 
 import wares from '../data/wares.js';
-import { findById, calcOrderTotal, toUSD, getCart } from '../common/utils.js';
+import { 
+    findById, 
+    calcOrderTotal, 
+    toUSD, 
+    getCart, 
+    orderConfirmation 
+} from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
 
 const tbody = document.querySelector('tbody');
@@ -23,8 +29,8 @@ if (cart.length === 0) {
     placeOrderButton.disabled = true;
 } else {
     placeOrderButton.addEventListener('click', () => {
+        alert(`Whale, whale, whale, what have we here? You just placed an order for ${orderConfirmation()}. Enjoy the newest additions to your pod!`);
         localStorage.removeItem('CART');
-        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
         window.location = '../';
     });
 }
